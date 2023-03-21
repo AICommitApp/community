@@ -1,7 +1,7 @@
 # AICommit
 
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/app.aicommit.plugin)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/app.aicommit.plugin)
+[![Version](https://img.shields.io/jetbrains/plugin/v/app.aicommit.plugin.svg)](https://plugins.jetbrains.com/plugin/app.aicommit.plugin)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/app.aicommit.plugin.svg)](https://plugins.jetbrains.com/plugin/app.aicommit.plugin)
 
 
 [![AI Commit](./assets/social_preview.jpg)](https://youtu.be/sDG8cx6i_kM "AI Commit")
