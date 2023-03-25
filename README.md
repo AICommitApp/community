@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/21289-aicommit.svg)](https://plugins.jetbrains.com/plugin/21289-aicommit)
 
 
-[![AI Commit](./assets/social_preview.jpg)](./.github/images/aicommit-video.mp4 "AI Commit")
+https://github.com/AICommitApp/community/raw/main/.github/images/aicommit-video.mp4
 
 Intelligent commit message writer powered by AI!
 
