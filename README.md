@@ -31,13 +31,13 @@ Once you have successfully installed the plugin and configured your OpenAI token
 
 ## Roadmap
 
-- [ ] Localize the plugin
-- [ ] Commit Action with progress status.
-- [ ] Generating commit information only for selected files.
+- [x] Commit Action with progress status.
+- [x] Generating commit information only for selected files.
 - [ ] Supports filtering files or folders.
 - [ ] Support for more commit message templates, prefixes, and suffixes.
 - [ ] Support for code documentation generation
 - [ ] Support for GPT-4 API
+- [ ] Localize the plugin
 
 ---
 
