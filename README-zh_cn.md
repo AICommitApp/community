@@ -6,14 +6,15 @@
 
 [![AI Commit](./assets/social_preview.jpg)](https://youtu.be/sDG8cx6i_kM "AI Commit")
 
-智能提交信息撰写器，由AI提供动力！
+AICommit — 面向 JetBrains IDE 的 AI 助手！
 
-- 使用OpenAI生成提交信息
-- 支持定制提示和各种参数调整
-- 与JetBrain产品高度集成，为用户带来出色的用户体验
-- 通过不收集任何代码信息来保护隐私
-- 我们使用简单而有效的算法来计算JVM令牌，以避免达到令牌限制。
-- 对于有大量更改文件的情况，进程会被拆分并同时执行，为您带来极快的速度。
+- 使用 GPT 的智能提交信息编写器
+- 在编辑器中弹出 AI 驱动的功能：代码优化、代码解释、文档生成、代码转换和翻译
+- 支持自定义提示和各种参数调整
+- 与 JetBrains 产品无缝集成，为用户提供卓越的使用体验
+- 对于变更文件数量较多的情况，采用并行处理，以实现极快的速度
+- 注重隐私保护：我们不收集任何代码信息或提交信息
+- 使用 AICommit 升级您的编程工作流程 —— 您的全方位 AI 编程助手！
 
 ## 安装
 
@@ -30,23 +31,52 @@
 
 安装了插件并成功配置了您的 OpenAI 令牌后，您就可以开始使用 AiCommit。您现在可以在当前项目上启动AiCommit并开始生成提交信息。单击窗口底部的“生成”按钮以为您的项目创建提交信息。
 
+### 生成提交信息
+
+![commit_message0](assets/commit_tool_window.png)
+
+
+![commit_message1](assets/commit_vcs.png)
+
+### 代码解释
+
+![explain_code](assets/explain_code_eng.gif)
+
+### 代码转换
+
+![code_translate](assets/code_translate_eng.gif)
+
+### 代码优化
+
+![code_optimize](assets/code_optimize_eng.gif)
+
+### 文档生成
+
+![code_documentation](assets/doc_gen_eng.gif)
+
+
+
+
 ## 路线图
 
-- [ ] 本地化插件
-- [ ] 带有进度状态的提交操作。
-- [ ] 仅针对选定文件生成提交信息。
+- [x] 本地化插件
+- [x] 带有进度状态的提交操作。
+- [x] 仅针对选定文件生成提交信息。
+- [x] 聊天模式
+- [x] 支持代码文档生成
+- [x] 支持代码生成、代码优化、代码解释和文本翻译
 - [ ] 支持过滤文件或文件夹。
 - [ ] 支持更多的提交信息模板，前缀和后缀。
-- [ ] 支持代码文档生成
 - [ ] 支持GPT-4 API
 
 ---
 
-## 信用
+## 感谢
 
 - [AICommit](https://github.com/Nutlope/aicommits)：一款使用AI为您编写Git提交信息的CLI。再也不用编写提交信息。
 - [Openai-Kotlin](https://github.com/aallam/openai-kotlin)：具有多平台和协程功能的OpenAI API的Kotlin客户端。
 - [java-diff-utils](https://github.com/java-diff-utils/java-diff-utils)
+- [knuddelsgmbh/jtokkit](https://github.com/knuddelsgmbh/jtokkit)
 - 基于[ JetBrains平台插件模板][template]的插件。
 - Deja Vu by Cykarl https://soundcloud.com/cykarl
   Creative Commons — Attribution 3.0 Unported — CC BY 3.0
