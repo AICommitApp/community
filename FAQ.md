@@ -42,3 +42,34 @@
 
 13. **Encountering 'The server had an error while processing your request. Sorry about that!'?**
     OpenAI service hit the limit, check [here](https://community.openai.com/t/openai-api-error-the-server-had-an-error-while-processing-your-request-sorry-about-that/53263).
+
+14. **Encountering 'The model 'gpt-4-32k-0314' does not exist'?**
+    This means you do not have access to use the model. The GPT-4 model is not currently available to all users, we recommend using the GPT-3.5 model instead.
+
+15. **Encountering 'License is not valid'?**
+    Check whether your account has properly subscribed to the AICommit plugin. If not, you will need a valid subscription.
+
+16. **Encountering 'ConnectException: 杩炴帴瓒呮椂'?**
+    It seems like a connection timeout, but the error message is garbled. Check your proxy settings and whether your system's encoding settings are set to UTF-8.
+
+17. **Encountering 'Bad gateway'?**
+    OpenAI service hit the limit, check [here](https://community.openai.com/t/how-to-handle-error-502-bad-gateway/152284).
+
+18. **Encountering 'SocketException: Connection reset'?**
+    Network issues, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
+
+19. **Encountering 'Incorrect API key provided:'?**
+    The API key is incorrect. You can find your API key [here](https://platform.openai.com/account/api-keys).
+
+20. **Encountering 'Engine not found'?**
+    There might be an issue with OpenAI's service, you may want to try again later.
+
+21. **Encountering 'Your authentication token has expired.'?**
+    Check whether your token is valid. For more details, check [here](https://community.openai.com/t/token-expiration/20250/3).
+
+22. **Encountering 'SSL peer shut down incorrectly'?**
+    Network issues, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
+
+23. **Encountering 'A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'?**
+    Network issues, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
+
