@@ -69,6 +69,8 @@ AICommit — 面向 JetBrains IDE 的 AI 助手！
 - [ ] 支持更多的提交信息模板，前缀和后缀。
 - [ ] 支持GPT-4 API
 
+## [FAQ](./FAQ.md)
+
 ---
 
 ## 感谢

@@ -63,9 +63,11 @@ Once you have successfully installed the plugin and configured your OpenAI token
 - [x] Generating commit information only for selected files.
 - [x] Chat Mode (for now).
 - [x] Support for code documentation generation, code optimization, explain code and translation.
+- [x] Support for GPT-4 API
 - [ ] Supports filtering files or folders.
 - [ ] Support for more commit message templates, prefixes, and suffixes.
-- [ ] Support for GPT-4 API
+
+## [FAQ](./FAQ.md)
 
 ---
 
