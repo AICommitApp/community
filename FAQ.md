@@ -2,74 +2,58 @@
 
 ## Product and Usage Questions
 
-1. **How does AICommit work?**
-   AICommit uses JetBrains Platform's API to identify code changes and sends the changes to OpenAI's GPT model. It uses the GPT model to analyze the diff, which helps in automating the writing of commit messages.
+1. **What does AICommit do?**  
+   AICommit analyzes staged changes in JetBrains IDEs and generates commit messages. You can insert the generated result directly into the Commit panel.
 
-2. **Will my code be exposed?**
-   AICommit does not collect your code. The changes to your code (not the entire code) will be sent to OpenAI's API service, just like when you use ChatGPT. We suggest you read our user terms [here](https://github.com/AICommitApp/community/blob/main/EULA.md) and OpenAI's privacy terms [here](https://openai.com/policies/terms-of-use).
+2. **Which AI providers are supported?**  
+   OpenAI, Azure OpenAI, Google Gemini, Anthropic Claude, and Ollama (local models).
 
-3. **Do I need to prepare my own OpenAI token?**
-   Yes, you need to. You can obtain the token [here](https://platform.openai.com/account/api-keys). AICommit is dedicated to minimizing token consumption.
+3. **What is PromptLab?**  
+   PromptLab is the commit-prompt workspace in AICommit. You can choose built-in templates, edit custom prompts, save templates, set a default template, and include recent commit summaries as context.
 
-4. **Will my token be exposed?**
-   No, AICommit will not collect your token. Your token will be sent only to OpenAI's API service. If you have set up a custom domain, the token will be sent to the domain for authentication.
+4. **Do I need to provide my own API key?**  
+   For cloud providers (OpenAI, Azure OpenAI, Gemini, Claude), yes. For Ollama, configure your local Ollama endpoint and model.
+
+5. **Will AICommit collect my code or commit messages?**  
+   AICommit does not collect your code or commit messages. Content is sent only to the provider you configured for generation. See [Privacy Policy](./PRIVACY_POLICY.md) and [EULA](./EULA.md).
+
+6. **Can I run AICommit in a local-only mode?**  
+   Yes. Use Ollama with local models for a local-first workflow.
+
+7. **How do I get started quickly?**  
+   Install the plugin, configure a provider and model, verify credentials, select a PromptLab template (or custom prompt), then click Generate.
 
 ## Common Issues
 
-5. **Encountering 'ConnectException: Operation timed out' or 'SocketException: Connection reset'?**
-   Check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
+8. **`API key missing`, `verify token failed`, or provider activation failed**  
+   Open AICommit settings and check key/endpoint/model for the selected provider. Re-run verification after saving settings.
 
-6. **Encountering 'Unknown error in verifyToken'?**
-   An unexpected problem might have occurred. First, please update to the latest version. If the problem persists, please create an issue or contact us via email.
+9. **`No enabled models for <provider>`**  
+   Go to settings and enable at least one model for the current provider.
 
-7. **Encountering 'You exceeded your current quota, please check your plan and billing details'?**
-   Your OpenAI request hit the limit. Check the official documentation [here](https://help.openai.com/en/articles/6891831-error-code-429-you-exceeded-your-current-quota-please-check-your-plan-and-billing-details).
+10. **Network timeout / connection reset / SSL errors**  
+   Check your network and proxy configuration in JetBrains: [HTTP Proxy Settings](https://www.jetbrains.com/help/idea/settings-http-proxy.html). Also verify your provider endpoint is reachable.
 
-8. **Encountering 'Rate limit reached for default-gpt-3.5-turbo in organization...' ?**
-   The model request has reached the limit. OpenAI limits API requests for users with different payment plans. Check [here](https://platform.openai.com/docs/guides/rate-limits#:~:text=Default%20rate%20limits%20for%20gpt,increases%20due%20to%20capacity%20constraints) for more information. We recommend waiting for 1 minute or changing to another model.
+11. **Quota/rate-limit errors (`429`)**  
+   Your provider quota or rate limit was reached. Wait and retry, switch to another model, or use another provider.
 
-9. **Encountering 'SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'?**
-   Network timeout, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
+12. **Service overloaded / unavailable (`5xx`)**  
+   The provider service is temporarily unavailable. Retry later or switch provider/model.
 
-10. **Encountering 'Invalid authorization header'?**
-    Make sure your token is set and valid.
+13. **`Invalid authorization header` or `Incorrect API key provided`**  
+   Replace the key with a valid one for the selected provider and verify again.
 
-11. **Encountering 'That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists.'?**
-    OpenAI hit the limit, check [here](https://community.openai.com/t/status-code-503-that-model-is-currently-overloaded-with-other-requests/31433).
+14. **Azure: `The API deployment for this resource does not exist`**  
+   Check Azure endpoint, deployment name, API version, and resource region. If you just created the deployment, wait a few minutes and retry.
 
-12. **Encountering 'This model's maximum context length is 4097 tokens. However, you requested 4335 tokens (2970 in the messages, 1365 in the completion).'?**
-    AICommit is optimizing the token calculation algorithm to address this issue soon.
+15. **Generated result was copied to clipboard instead of inserted into Commit panel**  
+   AICommit falls back to clipboard when it cannot find a writable Commit panel in the current context. Open/focus the Commit tool window and insert again.
 
-13. **Encountering 'The server had an error while processing your request. Sorry about that!'?**
-    OpenAI service hit the limit, check [here](https://community.openai.com/t/openai-api-error-the-server-had-an-error-while-processing-your-request-sorry-about-that/53263).
+16. **Prompt/template changes did not take effect**  
+   Make sure the expected template is selected, save template changes, and set it as default if needed.
 
-14. **Encountering 'The model 'gpt-4-32k-0314' does not exist'?**
-    This means you do not have access to use the model. The GPT-4 model is not currently available to all users, we recommend using the GPT-3.5 model instead.
+17. **`License is not valid`**  
+   Check your plugin subscription/license status in JetBrains Marketplace and your IDE account.
 
-15. **Encountering 'License is not valid'?**
-    Check whether your account has properly subscribed to the AICommit plugin. If not, you will need a valid subscription.
-
-16. **Encountering 'ConnectException: 杩炴帴瓒呮椂'?**
-    It seems like a connection timeout, but the error message is garbled. Check your proxy settings and whether your system's encoding settings are set to UTF-8.
-
-17. **Encountering 'Bad gateway'?**
-    OpenAI service hit the limit, check [here](https://community.openai.com/t/how-to-handle-error-502-bad-gateway/152284).
-
-18. **Encountering 'SocketException: Connection reset'?**
-    Network issues, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
-
-19. **Encountering 'Incorrect API key provided:'?**
-    The API key is incorrect. You can find your API key [here](https://platform.openai.com/account/api-keys).
-
-20. **Encountering 'Engine not found'?**
-    There might be an issue with OpenAI's service, you may want to try again later.
-
-21. **Encountering 'Your authentication token has expired.'?**
-    Check whether your token is valid. For more details, check [here](https://community.openai.com/t/token-expiration/20250/3).
-
-22. **Encountering 'SSL peer shut down incorrectly'?**
-    Network issues, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
-
-23. **Encountering 'A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'?**
-    Network issues, check your network and proxy settings [here](https://www.jetbrains.com/help/idea/settings-http-proxy.html).
-
+18. **How do I report a bug?**  
+   Please open an issue with IDE version, AICommit version, provider, model, and full error message: [Issue Tracker](https://github.com/AICommitApp/community/issues).

@@ -1,4 +1,5 @@
 # AICommit
+[English](README.md)
 
 [![Version](https://img.shields.io/jetbrains/plugin/v/21289-aicommit.svg)](https://plugins.jetbrains.com/plugin/21289-aicommit)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/21289-aicommit.svg)](https://plugins.jetbrains.com/plugin/21289-aicommit)
@@ -6,15 +7,32 @@
 
 [![AI Commit](./assets/social_preview.jpg)](https://youtu.be/sDG8cx6i_kM "AI Commit")
 
-AICommit — 面向 JetBrains IDE 的 AI 助手！
+依然是 JetBrains IDE 上最好用的 AI Commit Message 体验。
 
-- 使用 GPT 的智能提交信息编写器
-- 在编辑器中弹出 AI 驱动的功能：代码优化、代码解释、文档生成、代码转换和翻译
-- 支持自定义提示和各种参数调整
-- 与 JetBrains 产品无缝集成，为用户提供卓越的使用体验
-- 对于变更文件数量较多的情况，采用并行处理，以实现极快的速度
-- 注重隐私保护：我们不收集任何代码信息或提交信息
-- 使用 AICommit 升级您的编程工作流程 —— 您的全方位 AI 编程助手！
+每天节省 30+ 分钟提交信息编写时间。一键生成精准、上下文感知的 Commit Message。支持隐私优先的本地处理，已被 19,000+ 开发者使用。
+
+## 快速入口
+
+- [免费安装插件](https://plugins.jetbrains.com/plugin/21289-aicommit/)
+- [FAQ](./FAQ.md)
+- [问题反馈](https://github.com/AICommitApp/community/issues)
+- [EULA](./EULA.md)
+
+## 为什么选择 AICommit
+
+- **一键生成**：在 JetBrains VCS 提交面板中一键生成提交信息。
+- **Prompt Lab + Provider 快速切换**：在同一界面完成 Provider/模型选择、模板应用和历史结果查看。
+- **自定义模板**：支持内置模板和自定义模板，覆盖 Conventional Commit、发布说明、Bugfix 回归说明等场景。
+- **多 Provider 支持**：OpenAI、Azure OpenAI、Google Gemini、Anthropic Claude、Ollama（本地模型）。
+- **隐私优先本地模式**：可使用 Ollama 本地运行，满足更高隐私要求。
+
+## 最新更新（v3.4.4 - 2026-02-26）
+
+- 新增基于 Catalog 的模型管理，Provider/模型选择更一致。
+- OpenAI 默认切换为 `responses` 端点模式。
+- 提升流式响应与模型列表刷新的稳定性。
+- 在切换 Provider 或模型时保留提示词草稿。
+- 优化错误提示、本地化文案，以及缺少 API Token 时的设置引导体验。
 
 ## 安装
 
@@ -23,36 +41,28 @@ AICommit — 面向 JetBrains IDE 的 AI 助手！
   <kbd>设置/首选项</kbd> > <kbd>插件</kbd> > <kbd>市场</kbd> > <kbd>搜索 “AICommit”</kbd> >
   <kbd>安装插件</kbd>
 
-## 配置 [OpenAI Token](https://platform.openai.com/account/api-keys)
+## 配置 Provider API Key
 
-在 AiCommit 插件中，您需要输入 OpenAI 访问令牌以开始使用该插件。在 AiCommit 窗口的顶部，输入您的 OpenAI 访问令牌。然后，单击“验证”以确保您的访问令牌有效。
+在 AICommit 设置中选择 Provider（OpenAI / Azure OpenAI / Gemini / Claude / Ollama），并配置对应的 API Key 或服务地址。生成前可点击“验证”确认配置可用。
 
 ## 入门
 
-安装了插件并成功配置了您的 OpenAI 令牌后，您就可以开始使用 AiCommit。您现在可以在当前项目上启动AiCommit并开始生成提交信息。单击窗口底部的“生成”按钮以为您的项目创建提交信息。
+1. 安装插件并在 JetBrains IDE 中打开 AICommit。
+2. 选择 Provider 与模型，完成 API Key/服务地址配置并验证。
+3. 按需调整 Prompt Lab（模板、自定义 Prompt、默认模板、最近提交上下文）。
+4. 点击 **Generate** 生成结果，并插入 Commit 面板。
 
-### 生成提交信息
+### 一键生成
 
-![commit_message0](assets/commit_tool_window.png)
+![commit_action](assets/action.png)
 
+### Prompt Lab 与 Provider 切换
 
-![commit_message1](assets/commit_vcs.png)
+![tool_window](assets/toolwindow.png)
 
-### 代码解释
+### 自定义模板
 
-![explain_code](assets/explain_code_eng.gif)
-
-### 代码转换
-
-![code_translate](assets/code_translate_eng.gif)
-
-### 代码优化
-
-![code_optimize](assets/code_optimize_eng.gif)
-
-### 文档生成
-
-![code_documentation](assets/doc_gen_eng.gif)
+![prompt_lab](assets/prompt_lab.png)
 
 
 
@@ -60,14 +70,11 @@ AICommit — 面向 JetBrains IDE 的 AI 助手！
 ## 路线图
 
 - [x] 本地化插件
-- [x] 带有进度状态的提交操作。
-- [x] 仅针对选定文件生成提交信息。
-- [x] 聊天模式
-- [x] 支持代码文档生成
-- [x] 支持代码生成、代码优化、代码解释和文本翻译
+- [x] 多 Provider 支持（OpenAI / Azure OpenAI / Gemini / Claude / Ollama）
+- [x] PromptLab（模板管理、自定义 Prompt、默认模板）
+- [x] 带进度状态的提交信息生成与 Commit 面板插入
 - [ ] 支持过滤文件或文件夹。
 - [ ] 支持更多的提交信息模板，前缀和后缀。
-- [ ] 支持GPT-4 API
 
 ## [FAQ](./FAQ.md)
 

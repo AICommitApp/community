@@ -1,5 +1,5 @@
 # AICommit
-[中文简体](README-zh_cn.md)
+[简体中文](README-zh_cn.md)
 
 [![Version](https://img.shields.io/jetbrains/plugin/v/21289-aicommit.svg)](https://plugins.jetbrains.com/plugin/21289-aicommit)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/21289-aicommit.svg)](https://plugins.jetbrains.com/plugin/21289-aicommit)
@@ -7,16 +7,32 @@
 
 [![AI Commit](./assets/social_preview.jpg)](https://youtu.be/sDG8cx6i_kM "AI Commit")
 
-AI-powered programming assistant for JetBrains IDEs!
+Still the best AI commit messages for JetBrains IDEs.
 
-- Intelligent commit message writer using GPT
-- In-editor pop-up for AI-driven features: code optimization, code explanation, documentation generation, code conversion, and translation
-- Supporting custom prompts and various parameter adjustments
-- Seamless integration with JetBrains products for an excellent user experience
-- Parallel processing for scenarios with a large number of changed files, resulting in blazingly fast speeds
-- Privacy-first approach: We do not collect any code information or commit messages
+Save 30+ minutes daily writing commit messages. Generate precise, context-aware messages in one click. Privacy-first with local processing. Trusted by 19,000+ developers worldwide.
 
-Upgrade your coding workflow with AICommit – your all-in-one AI programming assistant!
+## Quick Links
+
+- [Install Plugin for Free](https://plugins.jetbrains.com/plugin/21289-aicommit/)
+- [FAQ](./FAQ.md)
+- [Bug Report](https://github.com/AICommitApp/community/issues)
+- [EULA](./EULA.md)
+
+## Why AICommit
+
+- **One-Click Generation**: Generate commit messages instantly from the JetBrains VCS commit panel.
+- **Prompt Lab & Provider Switch**: Pick provider/model, apply prompt templates, and review generation history in one place.
+- **Custom Templates**: Use built-in templates or create your own for Conventional Commits, release notes, and bugfix workflows.
+- **Multi-Provider AI**: OpenAI, Azure OpenAI, Google Gemini, Anthropic Claude, and Ollama (local models).
+- **Privacy-First Local Mode**: Use Ollama for local processing when your workflow requires stronger privacy control.
+
+## Latest Updates (v3.4.4 - 2026-02-26)
+
+- Added catalog-based model management for more consistent provider/model selection.
+- OpenAI now defaults to the `responses` endpoint mode.
+- Improved stability for streaming responses and model list refresh.
+- Preserved prompt drafts when switching providers or models.
+- Improved error handling, localization, and setup guidance when API token is missing.
 
 ## Installation
 
@@ -25,49 +41,26 @@ Upgrade your coding workflow with AICommit – your all-in-one AI programming as
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "AICommit"</kbd> >
   <kbd>Install Plugin</kbd>
 
-## Configuring [OpenAI Token](https://platform.openai.com/account/api-keys)
-In the AiCommit plugin, you'll need to enter your OpenAI access token to start using the plugin. At the top of the AiCommit window, enter your OpenAI access token. Then, click "Verify" to ensure your access token is valid.
+## Configuring Provider API Key
+In AICommit settings, choose your provider (OpenAI / Azure OpenAI / Gemini / Claude / Ollama) and configure the required API key or endpoint. Use "Verify" to confirm your configuration before generation.
 
 ## Getting Started
-Once you have successfully installed the plugin and configured your OpenAI token, you're ready to start using AiCommit. You can now launch AiCommit on your current project and begin generating commit messages. Click the "Generate" button at the bottom of the window to create a commit message for your project.
+1. Install the plugin and open AICommit in your JetBrains IDE.
+2. Select provider and model, then verify your API key/endpoint settings.
+3. Adjust Prompt Lab (template, custom prompt, default template, recent commit context).
+4. Click **Generate**, then insert the result into the Commit panel.
 
-### Generate Commit Message
+### One-Click Generation
 
-![commit_message0](assets/commit_tool_window.png)
+![commit_action](assets/action.png)
 
+### Prompt Lab & Provider Switch
 
-![commit_message1](assets/commit_vcs.png)
+![tool_window](assets/toolwindow.png)
 
-### Explain Code
+### Custom Templates
 
-![explain_code](assets/explain_code_eng.gif)
-
-### Code Translate
-
-![code_translate](assets/code_translate_eng.gif)
-
-### Code Optimization
-
-![code_optimize](assets/code_optimize_eng.gif)
-
-### Code Documentation
-
-![code_documentation](assets/doc_gen_eng.gif)
-
-
-
-## Roadmap
-
-- [x] Localize the plugin
-- [x] Commit Action with progress status.
-- [x] Generating commit information only for selected files.
-- [x] Chat Mode (for now).
-- [x] Support for code documentation generation, code optimization, explain code and translation.
-- [x] Support for GPT-4 API
-- [ ] Supports filtering files or folders.
-- [ ] Support for more commit message templates, prefixes, and suffixes.
-
-## [FAQ](./FAQ.md)
+![prompt_lab](assets/prompt_lab.png)
 
 ---
 
